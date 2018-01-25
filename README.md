@@ -1,6 +1,10 @@
 # yy-code-generation
-######代码生成工具：controller-service(impl)-mapper-SqlProvider
-######利用javapoet，基于Mybatis,快速构建应用项目，工程代码结构简单，生成文件如下：
+### 代码生成工具：controller-service(impl)-mapper-SqlProvider
+### 利用javapoet，基于Mybatis,快速构建应用项目，工程代码结构简单，生成文件如下：
+
+## Example
+
+controller层
 
 ```Java
 package com.website.controller;
