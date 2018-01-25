@@ -2,8 +2,11 @@
 代码生成工具：controller-service(impl)-mapper-SqlProvider
 利用javapoet，基于Mybatis,快速构建应用项目，工程代码结构简单，生成文件如下：
 
-/*----------分割线-----------*/
+```Java
+public static void main(String[] args){}
+```
 
+```Java
 package com.website.controller;
 
 import com.website.model.Company;
@@ -60,7 +63,7 @@ public class CompanyController {
 		return companyService.delete(id);
 	}
 }
-
+```
 /*----------分割线-----------*/
 
 package com.website.service;
