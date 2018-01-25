@@ -65,6 +65,9 @@ public class CompanyController {
 	}
 }
 ```
+
+service层
+
 ```Java
 package com.website.service;
 
@@ -134,6 +137,8 @@ public interface CompanyService {
 	Integer delete(Long id);
 }
 ```
+serviceImpl层
+
 ```Java
 package com.website.service.impl;
 
@@ -191,6 +196,8 @@ public class CompanyServiceImpl implements CompanyService {
 	}
 }
 ```
+mapper层
+
 ```Java
 package com.website.mapper;
 
@@ -231,6 +238,9 @@ public interface CompanyMapper {
 	Integer delete(@Param("id") Long id);
 }
 ```
+
+sqlProvider层
+
 ```Java
 package com.website.mapper;
 
