@@ -1,8 +1,7 @@
 # yy-code-generation
 ##### 代码生成工具：controller-service(impl)-mapper-SqlProvider
-##### 利用javapoet，根据数据库表结构,快速构建应用项目，工程代码结构简单，生成文件如下：
-
-###### 配置数据库连接信息，并执行 com.sqltool.common.MakeAll.java中的main()方法
+##### 配置数据库连接信息，并执行 com.sqltool.common.MakeAll.java中的main()方法
+###### 利用javapoet，根据数据库表结构,快速构建应用项目，工程代码结构简单，生成文件如下：
 
 ## Example
 
