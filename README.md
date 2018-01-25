@@ -1,10 +1,6 @@
 # yy-code-generation
-代码生成工具：controller-service(impl)-mapper-SqlProvider
-利用javapoet，基于Mybatis,快速构建应用项目，工程代码结构简单，生成文件如下：
-
-```Java
-public static void main(String[] args){}
-```
+######代码生成工具：controller-service(impl)-mapper-SqlProvider
+######利用javapoet，基于Mybatis,快速构建应用项目，工程代码结构简单，生成文件如下：
 
 ```Java
 package com.website.controller;
@@ -64,8 +60,7 @@ public class CompanyController {
 	}
 }
 ```
-/*----------分割线-----------*/
-
+```Java
 package com.website.service;
 
 import com.website.model.Company;
@@ -133,9 +128,8 @@ public interface CompanyService {
 	 */
 	Integer delete(Long id);
 }
-
-/*----------分割线-----------*/
-
+```
+```Java
 package com.website.service.impl;
 
 import com.website.mapper.CompanyMapper;
@@ -191,9 +185,8 @@ public class CompanyServiceImpl implements CompanyService {
 		return companyMapper.delete(id);
 	}
 }
-
-/*----------分割线-----------*/
-
+```
+```Java
 package com.website.mapper;
 
 import com.website.model.Company;
@@ -232,9 +225,8 @@ public interface CompanyMapper {
 	@Delete("DELETE FROM company WHERE id = #{id} ")
 	Integer delete(@Param("id") Long id);
 }
-
-/*----------分割线-----------*/
-
+```
+```Java
 package com.website.mapper;
 
 import com.website.model.Company;
@@ -322,5 +314,5 @@ public class CompanySqlProvider {
 		return whereBuilder.toString();
 	}
 }
-
+```
 
