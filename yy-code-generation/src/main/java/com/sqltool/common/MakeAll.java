@@ -10,17 +10,17 @@ import java.sql.*;
 
 public class MakeAll {
 
-	public static Connection connection;
-	public static Statement statement;
-	public static ResultSetMetaData metaData;
+	private static Connection connection;
+	private static Statement statement;
+	private static ResultSetMetaData metaData;
 
 	private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
 	private static final String URL = "jdbc:mysql://localhost:3306/yydb?serverTimezone=UTC&useSSL=false";
 	private static final String USERNAME = "root";
 	private static final String PASSWORD = "123456";
 
-	private static String filePath = System.getProperty("user.dir") + "\\src\\main\\java\\";
-	private static String packageName = "com.website";
+	private static final String filePath = System.getProperty("user.dir") + "\\src\\main\\java\\";
+	private static final String packageName = "com.website";
 	private static final String[] TABLES = { "company"};
 
 	static {
@@ -49,21 +49,21 @@ public class MakeAll {
 	}
 
 	/**
-	 * @param driverClass
-	 * @param dbUrl
-	 * @param username
-	 * @param password
-	 * @throws Exception
+	 * @param driverClass 驱动类
+	 * @param dbUrl 数据库地址
+	 * @param username 用户名
+	 * @param password 密码
+	 * @throws SQLException 异常
+	 * @throws ClassNotFoundException 异常
 	 */
-	public static void initConnection(String driverClass, String dbUrl, String username, String password)
-			throws Exception {
+	private static void initConnection(String driverClass, String dbUrl, String username, String password) throws SQLException, ClassNotFoundException {
 		Class.forName(driverClass);
 		connection = DriverManager.getConnection(dbUrl, username, password);
 		statement = connection.createStatement();
 	}
 
-	public static ResultSetMetaData getMetaDataFromTable(String tableName) throws Exception {
-		String sql = "SELECT * FROM " + tableName + " WHERE 1 != 1";
+	private static ResultSetMetaData getMetaDataFromTable(String tableName) throws Exception {
+		String sql = ("SELECT * FROM ").concat(tableName).concat(" WHERE 1 != 1");
 		ResultSet rs = statement.executeQuery(sql);
 		return rs.getMetaData();
 	}
